@@ -1,0 +1,54 @@
+{% comment %} Count how many product are in current collection and display with te collection title {% endcomment %}
+<div class=subtitle>
+<h2 class=subtitle1> We Have {{ collection.products | size }} items that fit your<br>
+    {{ collection.title }}
+</h2>
+</div>
+{% comment %} Iterate over collection to display product info {% endcomment %}
+{% for product in collection.products %}
+ <div class=product>
+      <img src="{{ product.featured_image | image_url: width:600 }}">
+    <div class=container>
+      <p id=subtext >{{ collection.title }}</p>
+      <h3 id=title>{{ product.title }}</h3>
+    <div class=reviews>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <p>{{ product.price | money }} </p>
+    </div>
+    <div class=cart>
+    <div class=info>
+      <p>Regular Price:{{ product.compare_at_price_max | money }} <br>
+      Shiping : FREE <br>
+      Ships in 2 bussines day </p>
+    </div>
+    {% form 'product', product %}
+      <button type='submit'>Add to cart</button>
+    {% endform %}
+    </div>
+      <div class="owl-carousel">
+      <blockquote class="blockquote blockquote--borderd blockquote--quoted">
+      <p class = "blockquote__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, ent, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="blockquote__text blockquote__text--credit">Smith</p>
+      </blockquote>
+     <blockquote class="blockquote blockquote--borderd blockquote--quoted">
+      <p class = "blockquote__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, ent, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="blockquote__text blockquote__text--credit">Thomas</p>
+      </blockquote>
+      <blockquote class="blockquote blockquote--borderd blockquote--quoted">
+      <p class = "blockquote__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, ent, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="blockquote__text blockquote__text--credit">Henry</p>
+      </blockquote>
+  </div>
+ </div>
+ </div>
+ {% comment %} Get other atached image of products and display {% endcomment %}
+ <div class=images>
+ {% for image in product.images%}
+ <img src="{{ image | img_url: widht:50 }}">
+  {% endfor %}
+  </div>
+{% endfor %}

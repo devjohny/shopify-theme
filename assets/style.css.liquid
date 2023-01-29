@@ -1,0 +1,163 @@
+.banner{
+    width: 95%;
+    {% comment %} border: 5px solid black; {% endcomment %}
+    margin:20px auto;
+    
+}
+.product{
+    width: 70%;
+    {% comment %} border:5px solid black; {% endcomment %}
+    margin:20px auto;
+    display: flex;
+
+}
+.product img {
+    border-radius:50%;
+    width:500px;
+}
+.subtitle h2 {
+    width:95%;
+    {% comment %} border:5px solid black; {% endcomment %}
+    background-color: #00344e;
+    color: white;
+    margin:20px auto;
+    
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    {% comment %} border:5px solid black; {% endcomment %}
+    height: 100%;
+    width:50%;
+}
+#subtext {
+    font: italic small-caps 12px/30px Georgia, serif;
+    color:grey;
+    margin-left:50px;
+}
+
+.container #title {
+    font-size: 50px;
+    color: #00344e;
+    margin:0px 0px 0px 50px;
+    padding: 0;
+    {% comment %} border:5px solid black; {% endcomment %}
+    width: 50%;
+}
+.reviews{
+    {% comment %} border:5px solid black; {% endcomment %}
+    display: flex;
+    align-items: baseline;
+    justify-content:space-evenly;
+    margin-left:50px;
+    color:#f26101;
+    width: 25%
+}
+.cart{
+    
+    display:flex;
+    flex-direction: row;
+    margin-left:50px;    
+    {% comment %} border:5px solid black; {% endcomment %}
+
+    
+}
+.info{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    {% comment %} border:5px solid black; {% endcomment %}
+    height: 10% ;
+    margin:0px;
+    padding:7px;
+    {% comment %} padding-top:14px; {% endcomment %}
+    {% comment %} line-height:25px; {% endcomment %}
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+.cart .info p{
+    font: italic small-caps 12px/30px Georgia, serif;
+    color:black;
+    {% comment %} border:1px solid gray; {% endcomment %}
+    margin: 0;
+    line-height:10px;
+}
+/* CSS */
+button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #ffcb05;
+  border: 1px solid transparent; 
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff; 
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.owl-carousel{
+    {% comment %} border:5px solid black; {% endcomment %}
+}
+.owl-carousel{
+    width:90%;
+    {% comment %} border:5px solid black; {% endcomment %}
+    margin-left:50px;
+}
+.images img{
+    border-radius:50%;
+    {% comment %} border:5px solid black; {% endcomment %}
+}
+.images{
+    {% comment %} border:5px solid black; {% endcomment %}
+    margin-left:350px;
+}
+.blockquote{
+    max-width:600px;
+    margin:10px 30px;
+    padding:25px;
+    {% comment %} box-sizing:border-box; {% endcomment %}
+}
+
+.blockquote--quoted::before{
+    font-family: 'Gelasio',serif;  
+    content:"\201c";
+    font-size:80px;
+    display:block;
+    margin-bottom:-40px;
+    margin-top:-20px;
+    color:grey; 
+}
+.blockquote__text{
+    font-family: 'Gelasio',serif; 
+    font-size:1.15em;
+    color: grey;
+    margin:0;
+    line-height:1.5;
+    }
+.blockquote__text--credit{
+    font-weight: bold;
+    font-style: normal;
+    text-align:right;
+    color:black;
+}
+{% comment %} .blockquote__text:not(:last-child){
+    margin-bottom:1em;
+} {% endcomment %}
+.blockquote__text--credit::before{
+    content: "\2014\0020";
+}
